@@ -8,6 +8,7 @@ body{
 .container{
     flex: 1;
 }
+
 /* Navbar */
 
 .navbar {
@@ -58,7 +59,7 @@ body{
 }
 
 /* HOME  */
-.card{
+.listing-card{
     border: none !important;
     margin-bottom: 2rem;
 }
@@ -81,7 +82,6 @@ body{
     text-decoration: none;
 }
 
-/* Card Effect */
 .card-img-overlay:hover{
     opacity: 0.2;
     background-color: aliceblue;
@@ -100,4 +100,9 @@ body{
 
 .btns{
     display: flex;
+}
+
+.show-card {
+    padding-left: 0;
+    padding-right: 0;
 }
