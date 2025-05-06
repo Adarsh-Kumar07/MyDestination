@@ -1,15 +1,43 @@
+<style>
+  .search-btn {
+    background-color: #fe424d;
+    color:#fff;
+    border-radius: 20px;
+    padding: 0 1rem 0 1rem;
+}
+
+.search-btn:hover {
+    background-color: #fe424d;
+    color:#fff;
+}
+
+.search-btn i {
+    display: inline;
+    margin-right: 0.5rem;
+}
+
+.search-inp { 
+    border-radius: 20px;
+    padding: 0.5rem 3rem 0.5rem 3rem;
+    font-size: 1rem;
+}
+</style>
 <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top" >
     <div class="container-fluid">
         
-      <a class="navbar-brand" href="/"><img src="" alt="My Destination" srcset=""></a>
+      <a class="navbar-brand" href="/listings"><img src="../assets/logo.jpeg" alt="My Destination" height ="50"></a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-link" href="/listings"><i class="fa fa-fw fa-home"></i> Home</a>
-          <!-- <a class="nav-link disabled" aria-disabled="true">Disabled</a> -->
+        <div class="navbar-nav ms-auto">
+          <form class="d-flex" role="search">
+            <input class="form-control me-2 search-inp" type="search" placeholder="Search Destinations" aria-label="Search"/>
+            <button class="btn search-btn" type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>Search
+            </button>
+          </form>
         </div>
         <div class="navbar-nav ms-auto">
           <a class="nav-link" href="/listings/new">Add New</a>
@@ -22,3 +50,25 @@
           <% } %>
     </div>
   </nav>
+
+<!-- Navbar -->
+
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <!-- City Links for large screens -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-none d-lg-flex">
+        <li class="nav-item"><a class="nav-link city-link" href="/listings" data-city="all">All Cities</a></li>
+        <li class="nav-item"><a class="nav-link city-link" href="#" data-city="newyork">New York</a></li>
+        <li class="nav-item"><a class="nav-link city-link" href="#" data-city="losangeles">Los Angeles</a></li>
+        <li class="nav-item"><a class="nav-link city-link" href="#" data-city="chicago">Chicago</a></li>
+      </ul>
+
+      <!-- Dropdown for small screens -->
+      <form class="d-lg-none w-100 mt-2">
+        <select class="form-select" id="cityDropdown">
+          <option value="all">All Cities</option>
+          <option value="newyork">New York</option>
+          <option value="losangeles">Los Angeles</option>
+          <option value="chicago">Chicago</option>
+        </select>
+      </form>
+    </div>

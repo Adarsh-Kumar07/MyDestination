@@ -71,5 +71,12 @@
           <% } %>
         </div>
       </div>
+      <% if(currUser && !(currUser._id.equals(listing.owner._id )))  { %> 
+        <form action="/listings/booking" method="get">
+          <div class="fixed-bottom bg-light text-center p-3 shadow">
+            <button class="btn btn-primary">Continue To Book</button>
+          </div>
+        </form>
+      <% } %>
     </div>
   </body>

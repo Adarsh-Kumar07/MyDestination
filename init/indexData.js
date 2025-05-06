@@ -3,7 +3,7 @@ const initData = require("./data.js");
 // const initData = require("./newData.js");
 const Listing = require("../models/listing.js");
 
-const MONGO_URL = "mongodb://127.0.0.1:27017/my_destination";
+const MONGO_URL = "mongodb://127.0.0.1:27017/mydestination";
 
 main()
   .then(() => {
@@ -18,7 +18,7 @@ async function main() {
 }
 
 const initDB = async () => {
-  initData.data = initData.data.map((obj) => ({...obj, owner : "6803b01bdfdb4b1690c348e6"}));    //initialize it
+  initData.data = initData.data.map((obj) => ({...obj, owner : "681a6a7c21ddd54571dd8759"}));    //initialize it
   await Listing.insertMany(initData.data);
   console.log("data was initialized");
 };
